@@ -63,6 +63,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Data\Api\Api\JSONProvider.cs" />
+    <Compile Include="Data\Api\Api\RAM_API_ENGINE.cs" />
+    <Compile Include="Data\Api\Model\DotaMatchStats.cs" />
+    <Compile Include="Data\Api\Model\Player.cs" />
+    <Compile Include="Data\Jsons\DotaInfo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -86,6 +91,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\Jsons\Assets\heroes.json" />
+    <None Include="Data\Jsons\Assets\items.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
