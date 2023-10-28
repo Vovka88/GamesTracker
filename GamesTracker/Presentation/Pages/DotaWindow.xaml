@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="GamesTracker.Presentation.Pages.DotaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamesTracker.Presentation.Pages"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800" Background="White" Loaded="Window_Loaded">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="gamemode" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Gamemode" FontSize="20" FontWeight="Normal"/>
+            <TextBlock x:Name="duration" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Duration" FontSize="19" FontWeight="Light"/>
+            <TextBlock x:Name="radscore" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Text="999" FontSize="30" FontWeight="DemiBold" Padding="0, 0, 40, 0"/>
+            <TextBlock x:Name="direscore" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="999" FontSize="30" FontWeight="DemiBold" Padding="40, 0, 0, 0"/>
+            <TextBlock x:Name="victory" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Radiant wins!" FontSize="25" FontWeight="DemiBold"/>
+
+            <Image x:Name="img" Grid.Row="3" Grid.Column="0" Source="{Binding bitmapImage}"/>
+            <Image x:Name="img2" Grid.Row="4" Grid.Column="0" Source="{Binding bitmapImage}"/>
+        </Grid>
+    </Grid>
+</UserControl>
