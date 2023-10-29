@@ -33,20 +33,6 @@ namespace GamesTracker.Presentation.Pages
             victory.Text = _stats._win == true ? "Radiant wins!": "Dire wins!";
             radscore.Text = _stats._radiantScore.ToString();
             direscore.Text = _stats._direScore.ToString();
-            
-            BitmapImage btmImg = new BitmapImage();
-            btmImg.BeginInit();
-            btmImg.UriSource = new Uri(DotaInfo.FromJsonTakeCharacterImg(25));
-            btmImg.EndInit();
-
-            img.Source = btmImg;
-
-            BitmapImage btmImg2 = new BitmapImage();
-            btmImg2.BeginInit();
-            btmImg2.UriSource = new Uri(DotaInfo.FromJsonTakeItemsImg(68));
-            btmImg2.EndInit();
-
-            img2.Source = btmImg2;
         }
     }
 }
