@@ -1,9 +1,6 @@
 ﻿using GamesObserver.Data.Api;
-using GamesObserver.Data.Jsons;
-using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 
 namespace GamesTracker.Presentation.Pages
 {
@@ -33,6 +30,11 @@ namespace GamesTracker.Presentation.Pages
             victory.Text = _stats._win == true ? "Radiant wins!": "Dire wins!";
             radscore.Text = _stats._radiantScore.ToString();
             direscore.Text = _stats._direScore.ToString();
+
+            for (int i = 0; i < 10; i++)
+            {
+                radiantTeam.Items.Add(_stats.players[i]);
+            }
         }
     }
 }

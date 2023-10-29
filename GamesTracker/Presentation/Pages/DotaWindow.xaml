@@ -31,8 +31,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Image/>
-                            <TextBlock></TextBlock>
+                            <Image Source="{Binding _heroImgUrl}"/>
+                            <TextBlock Text="{Binding _heroId}"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

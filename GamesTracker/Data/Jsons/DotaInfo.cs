@@ -20,7 +20,7 @@ namespace GamesObserver.Data.Jsons
             {
                 if (id == token["id"].ToObject<int>())
                 {
-                    _imgPath = token["url_small_portrait"].ToObject<string>();
+                    _imgPath = token["url_large_portrait"].ToObject<string>();
                 }
             }
 
