@@ -66,17 +66,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data\Api\Api\JSONProvider.cs" />
-    <Compile Include="Data\Api\Api\RAM_API_ENGINE.cs" />
-    <Compile Include="Data\Api\Model\DotaMatchStats.cs" />
-    <Compile Include="Data\Api\Model\Player.cs" />
+    <Compile Include="Data\Api\DotaApi\Api\JSONProvider.cs" />
+    <Compile Include="Data\Api\DotaApi\Api\RAM_API_ENGINE.cs" />
+    <Compile Include="Data\Api\DotaApi\Model\DotaMatchStats.cs" />
+    <Compile Include="Data\Api\DotaApi\Model\Player.cs" />
     <Compile Include="Data\Jsons\DotaInfo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Presentation\Pages\GameStatisticsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\Pages\GameStatisticsWindow.xaml.cs">
+      <DependentUpon>GameStatisticsWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
