@@ -19,7 +19,6 @@ namespace GamesObserver.Data.Api
             stats._win = keyValuePairs["radiant_win"].ToObject<bool>();
             IList<JToken> list = keyValuePairs["players"].Children().ToList();
             List<Player> players = new List<Player>();
-            int c = 0;
             foreach (JToken token in list)
             {
                 Player user = new Player();

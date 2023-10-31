@@ -9,7 +9,7 @@ namespace GamesObserver.Data.Jsons
     {
         public static string FromJsonTakeCharacterImg(int id)
         {
-            string path = @"C:\Users\User\source\repos\GamesObserver\GamesObserver\Data\Jsons\Assets\heroes.json";
+            string path = @"C:\Users\User\source\repos\GamesObserver\GamesObserver\Data\Jsons\DotaJsons\Assets\heroes.json";
             string json = File.ReadAllText(path);
             JObject keyValuePairs = JObject.Parse(json);
             IList<JToken> list = keyValuePairs["heroes"].Children().ToList();
@@ -29,7 +29,7 @@ namespace GamesObserver.Data.Jsons
 
         public static string FromJsonTakeItemsImg(int id)
         {
-            string path = @"C:\Users\User\source\repos\GamesObserver\GamesObserver\Data\Jsons\Assets\items.json";
+            string path = @"C:\Users\User\source\repos\GamesObserver\GamesObserver\Data\Jsons\DotaJsons\Assets\items.json";
             string json = File.ReadAllText(path);
             JObject keyValuePairs = JObject.Parse(json);
             IList<JToken> list = keyValuePairs["items"].Children().ToList();
