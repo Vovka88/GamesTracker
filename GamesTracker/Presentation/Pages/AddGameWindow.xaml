@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="GamesTracker.Presentation.Pages.AddGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GamesTracker.Presentation.Pages"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800" Background="#31354d">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- CENTER -->
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="gamename" FontWeight="DemiBold" Foreground="White"
+                materialDesign:HintAssist.Hint="Game Name" FontSize="15" 
+                materialDesign:HintAssist.HelperText="Enter name of a game"
+                
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+            <TextBlock/>
+            <TextBox x:Name="players" FontWeight="DemiBold" Foreground="White"
+                materialDesign:HintAssist.Hint="Count of players" FontSize="13"
+                materialDesign:HintAssist.HelperText="Enter how many players been in game"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="players_TextChanged" />
+        </StackPanel>
+
+        <Button x:Name="AddGameButton" Grid.Row="1" Grid.Column="1" Content="Add Game" Click="AddGameButton_Click"/>
+
+        <!-- LEFT -->
+
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+            <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White" />
+            <TextBlock Text="TEAM A" FontSize="23" FontWeight="DemiBold" Foreground="White"/>
+            <StackPanel x:Name="teamA" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+        </StackPanel>
+
+        <!-- RIGHT -->
+
+        <StackPanel Grid.Column="2" HorizontalAlignment="Center">
+            <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White"/>
+            <TextBlock Text="TEAM B" FontSize="23" FontWeight="DemiBold" Foreground="White"/>
+            <StackPanel x:Name="teamB" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+        </StackPanel>
+        
+        
+    </Grid>
+</UserControl>

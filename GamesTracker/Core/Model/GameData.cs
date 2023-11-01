@@ -1,0 +1,23 @@
+﻿namespace GamesTracker.Core.Model
+{
+    public class GameData
+    {
+        public string _Name { get; set; }
+        public int _PlayersCount { get; set; }
+        public string _TeamA { get; set; }
+        public int _PlayersInTeamA { get; set; }
+        public string _TeamB { get; set; }
+        public int _PlayersInTeamB { get; set; }
+
+        public GameData(string _Name, int _PlayersCount, string _TeamA, string _TeamB) {
+            this._Name = _Name;
+            this._PlayersCount = _PlayersCount;
+            this._TeamA = _TeamA;
+            this._TeamB = _TeamB;
+
+            if (_PlayersCount % 2 == 0) _PlayersInTeamA = _PlayersCount / 2;
+            else _PlayersInTeamA = (_PlayersCount / 2) + 1;
+            _PlayersInTeamB = _PlayersCount / 2;
+        }
+    }
+}
