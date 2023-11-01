@@ -1,4 +1,6 @@
 ﻿using GamesTracker.Core.Model;
+using Multipage.Navigator;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -11,11 +13,13 @@ namespace GamesTracker.Presentation.Pages
     public partial class CompetitiveWindow : UserControl
     {
         private GameData _data;
+        private List<GameData> _matches;
 
-        public CompetitiveWindow(GameData _data)
+        public CompetitiveWindow(int _index, List<GameData> _matches)
         {
             InitializeComponent();
-            this._data = _data;
+            this._data = _matches[_index];
+            this._matches = _matches;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -31,6 +35,11 @@ namespace GamesTracker.Presentation.Pages
                 if (i % 2 != 0) teamB.Children.Add(tb);
                 else teamA.Children.Add(tb);
             }
+        }
+
+        private void historyButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigatorObject.Switch(new HistoryWindow(_matches));
         }
     } 
 }

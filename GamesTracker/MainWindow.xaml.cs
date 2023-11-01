@@ -1,6 +1,8 @@
-﻿using GamesTracker.Presentation.Pages;
+﻿using GamesTracker.Core.Model;
+using GamesTracker.Presentation.Pages;
 using Multipage.Navigator;
 using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,11 +13,15 @@ namespace GamesTracker
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<GameData> list = new List<GameData>();
         public MainWindow()
         {
             InitializeComponent();
+            list.Add(new GameData("Dota 2", 10, "TeamA", "TeamB"));
+            list.Add(new GameData("CSGO", 9, "TeamA", "TeamB"));
             NavigatorObject.pageSwitcher = this;
-            NavigatorObject.Switch(new CompetitiveWindow(new Core.Model.GameData("Dota 2", 10)));
+            //NavigatorObject.Switch(new CompetitiveWindow(new Core.Model.GameData("Dota 2", 10, "TeamA", "TeamB")));
+            NavigatorObject.Switch(new HistoryWindow(list));
         }
 
         public Action CloseAction { get; set; }

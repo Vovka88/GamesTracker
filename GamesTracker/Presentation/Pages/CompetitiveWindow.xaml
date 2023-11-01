@@ -37,7 +37,7 @@
                 </StackPanel>
             </StackPanel>
 
-            <Button Grid.Row="5" Grid.ColumnSpan="2" Margin="120, 0, 120, 0" Background="#404666" BorderBrush="#404666" FontWeight="Bold">HISTORY</Button>
+            <Button x:Name="historyButton" Grid.Row="5" Grid.ColumnSpan="2" Margin="120, 0, 120, 0" Background="#404666" BorderBrush="#404666" FontWeight="Bold" Click="historyButton_Click">HISTORY</Button>
         </Grid>
     </Grid>
 </UserControl>
