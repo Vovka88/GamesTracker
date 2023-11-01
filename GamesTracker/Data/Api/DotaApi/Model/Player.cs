@@ -3,6 +3,7 @@
     internal class Player
     {
         public int _heroId { get; set; }
+        public string _heroImgUrl { get; set; }
         public int _kills { get; set; }
         public int _death { get; set; }
         public int _assists { get; set; }

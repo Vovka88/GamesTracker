@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using GamesObserver.Data.Jsons;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace GamesObserver.Data.Api
                 Player user = new Player();
                 Console.WriteLine(token.ToString());
                 user._heroId = token["hero_id"].ToObject<int>();
+                user._heroImgUrl = DotaInfo.FromJsonTakeCharacterImg(user._heroId);
                 user._kills = token["kills"].ToObject<int>();
                 user._death = token["deaths"].ToObject<int>();
                 user._assists = token["assists"].ToObject<int>();
