@@ -30,6 +30,24 @@
                 materialDesign:HintAssist.Hint="Count of players" FontSize="13"
                 materialDesign:HintAssist.HelperText="Enter how many players been in game"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="players_TextChanged" />
+            <TextBlock FontSize="15"/>
+
+            <ComboBox x:Name="pressets" FontSize="15" FontWeight="DemiBold" Foreground="LightGray"
+                      Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                      materialDesign:HintAssist.Hint="Pressets" SelectionChanged="pressets_SelectionChanged">
+                <ComboBoxItem IsSelected="True">
+                    None
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    Dota 2
+                </ComboBoxItem>
+            </ComboBox>
+            <TextBlock FontSize="15"/>
+            <TextBox x:Name="match_id" FontWeight="DemiBold" Foreground="White"
+                       materialDesign:HintAssist.Hint="Match id" FontSize="15" IsEnabled="False"
+                       materialDesign:HintAssist.HelperText="For example: 7393055841"
+                       Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <!--<StackPanel x:Name="additElements"/>-->
         </StackPanel>
 
         <Button x:Name="AddGameButton" Grid.Row="1" Grid.Column="1" Content="Add Game" Click="AddGameButton_Click"/>
@@ -38,7 +56,8 @@
 
         <StackPanel Grid.Column="0" HorizontalAlignment="Center">
             <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White" />
-            <TextBlock Text="TEAM A" FontSize="23" FontWeight="DemiBold" Foreground="White"/>
+            <TextBox FontSize="23" FontWeight="DemiBold" Foreground="White"
+                     materialDesign:HintAssist.Hint="Team A"/>
             <StackPanel x:Name="teamA" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             </StackPanel>
         </StackPanel>
@@ -47,7 +66,8 @@
 
         <StackPanel Grid.Column="2" HorizontalAlignment="Center">
             <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White"/>
-            <TextBlock Text="TEAM B" FontSize="23" FontWeight="DemiBold" Foreground="White"/>
+            <TextBox FontSize="23" FontWeight="DemiBold" Foreground="White"
+                     materialDesign:HintAssist.Hint="Team B"/>
             <StackPanel x:Name="teamB" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             </StackPanel>
         </StackPanel>

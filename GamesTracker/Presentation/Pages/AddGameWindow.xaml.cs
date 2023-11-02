@@ -1,5 +1,6 @@
 ﻿using GamesTracker.Core.Model;
 using Multipage.Navigator;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,7 +38,6 @@ namespace GamesTracker.Presentation.Pages
                     else teamB.Children.Add(tb);
                     }
                 }
-            else players.Text = (10).ToString();
             
         }
 
@@ -46,6 +46,25 @@ namespace GamesTracker.Presentation.Pages
             GameData gameData = new GameData(gamename.Text, int.Parse(players.Text), "TeamA", "TeamB");
             _matches.Add(gameData);
             NavigatorObject.Switch(new HistoryWindow(_matches));
+        }
+
+        private void pressets_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //gamename.Text = pressets.Items[pressets.SelectedIndex].ToString();
+            if (pressets.Items[pressets.SelectedIndex].ToString() == "System.Windows.Controls.ComboBoxItem: Dota 2")
+            {
+                gamename.Text = "Dota 2";
+                players.Text = (10).ToString();
+                match_id.IsEnabled = true;
+            } 
+            else if (pressets.Items[pressets.SelectedIndex].ToString() == "System.Windows.Controls.ComboBoxItem: None")
+            {
+                gamename.Text = string.Empty;
+                players.Text = string.Empty;
+                teamA.Children.Clear();
+                teamB.Children.Clear();
+                match_id.IsEnabled = false;
+            }
         }
     }
 }
