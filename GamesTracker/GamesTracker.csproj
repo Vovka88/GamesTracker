@@ -97,6 +97,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentation\Pages\DotaWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Presentation\Pages\HistoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,6 +112,9 @@
     </Compile>
     <Compile Include="Presentation\Pages\CompetitiveWindow.xaml.cs">
       <DependentUpon>CompetitiveWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Pages\DotaWindow.xaml.cs">
+      <DependentUpon>DotaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Pages\HistoryWindow.xaml.cs">
       <DependentUpon>HistoryWindow.xaml</DependentUpon>
