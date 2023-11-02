@@ -28,7 +28,7 @@
             <TextBlock x:Name="direscore" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="999" FontSize="30" FontWeight="DemiBold" Foreground="White" Padding="40, 0, 0, 0"/>
             <TextBlock x:Name="victory" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Text="Radiant wins!" FontSize="25" FontWeight="DemiBold" Foreground="White"/>
 
-            <ListView x:Name="radiantTeam" Grid.Row="3" Grid.Column="0" Grid.RowSpan="3">
+            <ListView x:Name="radiantTeam" Grid.Row="3" Grid.Column="0" Grid.RowSpan="3" Background="#31354d" BorderBrush="#31354d">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -39,7 +39,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView x:Name="direTeam" Grid.Row="3" Grid.Column="1" Grid.RowSpan="3">
+            <ListView x:Name="direTeam" Grid.Row="3" Grid.Column="1" Grid.RowSpan="3" Background="#31354d" BorderBrush="#31354d">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -50,9 +50,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button x:Name="historyButton" Grid.Row="6" Grid.ColumnSpan="2" Margin="120, 0, 120, 0" Background="#404666" BorderBrush="#404666" FontWeight="Bold" Click="historyButton_Click">HISTORY</Button>
-            <!--<Image x:Name="img" Grid.Row="3" Grid.Column="0" Source="{Binding bitmapImage}"/>
-            <Image x:Name="img2" Grid.Row="4" Grid.Column="0" Source="{Binding bitmapImage}"/>-->
+            <Button x:Name="historyButton" Grid.Row="6" Grid.ColumnSpan="2" Margin="120, 0, 120, 0" Foreground="White" Background="#404666" BorderBrush="#404666" FontWeight="Bold" Click="historyButton_Click">HISTORY</Button>
         </Grid>
     </Grid>
 </UserControl>
