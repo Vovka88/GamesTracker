@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         
         <!-- CENTER -->
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" x:Name="Menu">
             <TextBox x:Name="gamename" FontWeight="DemiBold" Foreground="White"
                 materialDesign:HintAssist.Hint="Game Name" FontSize="15" 
                 materialDesign:HintAssist.HelperText="Enter name of a game"
@@ -41,7 +41,11 @@
                 <ComboBoxItem>
                     Dota 2
                 </ComboBoxItem>
+                <ComboBoxItem>
+                    Battle Royale
+                </ComboBoxItem>
             </ComboBox>
+            
             <TextBlock FontSize="15"/>
             <TextBox x:Name="match_id" FontWeight="DemiBold" Foreground="White"
                        materialDesign:HintAssist.Hint="Match id" FontSize="15" IsEnabled="False"
@@ -57,7 +61,7 @@
         <StackPanel Grid.Column="0" HorizontalAlignment="Center">
             <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White" />
             <TextBox FontSize="23" FontWeight="DemiBold" Foreground="White"
-                     materialDesign:HintAssist.Hint="Team A"/>
+                     materialDesign:HintAssist.Hint="Team A" x:Name="teamA_Name"/>
             <StackPanel x:Name="teamA" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
             </StackPanel>
         </StackPanel>
@@ -67,7 +71,7 @@
         <StackPanel Grid.Column="2" HorizontalAlignment="Center">
             <TextBlock FontSize="23" FontWeight="DemiBold" Foreground="White"/>
             <TextBox FontSize="23" FontWeight="DemiBold" Foreground="White"
-                     materialDesign:HintAssist.Hint="Team B"/>
+                     materialDesign:HintAssist.Hint="Team B" x:Name="teamB_Name"/>
             <StackPanel x:Name="teamB" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             </StackPanel>
         </StackPanel>

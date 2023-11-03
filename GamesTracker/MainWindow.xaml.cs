@@ -21,8 +21,8 @@ namespace GamesTracker
             list.Add(new GameData("CSGO", 9, "TeamA", "TeamB"));
             NavigatorObject.pageSwitcher = this;
             //NavigatorObject.Switch(new CompetitiveWindow(new Core.Model.GameData("Dota 2", 10, "TeamA", "TeamB")));
-            //NavigatorObject.Switch(new HistoryWindow(list));
-            NavigatorObject.Switch(new DotaWindow("7393055841"));
+            NavigatorObject.Switch(new HistoryWindow(list));
+            //NavigatorObject.Switch(new DotaWindow("7393055841", list));
         }
 
         public Action CloseAction { get; set; }

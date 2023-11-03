@@ -138,6 +138,7 @@
     </EmbeddedResource>
     <None Include="Data\Jsons\DotaJsons\Assets\heroes.json" />
     <None Include="Data\Jsons\DotaJsons\Assets\items.json" />
+    <None Include="Data\Jsons\DotaJsons\Assets\modes.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

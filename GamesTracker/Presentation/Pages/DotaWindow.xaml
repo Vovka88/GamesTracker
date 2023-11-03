@@ -13,7 +13,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.3*"/>
                 <RowDefinition Height="0.4*"/>
                 <RowDefinition Height="0.3*"/>
                 <RowDefinition/>
@@ -39,12 +39,12 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <ListView x:Name="direTeam" Grid.Row="3" Grid.Column="1" Grid.RowSpan="3" Background="#31354d" BorderBrush="#31354d">
+            <ListView x:Name="direTeam" Grid.Row="3" Grid.Column="1" Grid.RowSpan="3" Background="#31354d" BorderBrush="#31354d" HorizontalAlignment="Right">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding _heroImgUrl}"/>
                             <TextBlock Text="{Binding _heroId}"></TextBlock>
+                            <Image Source="{Binding _heroImgUrl}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
